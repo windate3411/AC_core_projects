@@ -24,7 +24,7 @@
 git clone https://github.com/windate3411/AC_core_projects.git
 ```
 
-### 安裝套件
+## 安裝套件
 
 由於下載的會是整個AC_core_projects資料夾
 請先利用指令或GUI畫面前往restaurant_list資料夾
