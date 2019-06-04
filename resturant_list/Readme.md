@@ -10,6 +10,12 @@
 | 搜尋    | 輸入餐廳名稱或主題關鍵字即可進行搜尋 |
 | 回首頁   | 點選右上角的Restaurant List即可回到首頁 |
 
+## 開發環境
+
++ [Node.js v10.16.0(LTS)](https://nodejs.org/en/)
++ [Express v4.17.1](https://www.npmjs.com/package/express)
++ [Handlebars v4.1.2](https://www.npmjs.com/package/handlebars)
+
 ## 如何開始
 
 利用git bash或是cmd在目標資料夾輸入以下指令
@@ -40,14 +46,15 @@ npm install
 npm run dev
 ```
 
-## 給助教的話()
+## 給助教的話
 
-為了方便助教批改，以下列出修改部分
+__為了方便助教批改，以下列出修改部分__
 --- 
 + 使用動態regrex改寫搜尋功能
 + 建立func.js用來儲存使用的函數(內部僅有search一個功能函式)
 + 微調搜尋框的css
-想達成卻未達成目標
+
+__想達成卻未達成目標__
 --- 
 + 原本打算用js語法做出類似auto-complete的效果，不過後來發現無法在sever端操作DOM而放棄
 + 原本打算在show頁面改變banner的背景圖片，但同樣因無法操作DOM而放棄
