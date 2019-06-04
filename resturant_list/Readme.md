@@ -1,83 +1,58 @@
 # 我的餐廳清單 
 
-此專案收納了我前八名的餐廳，使用者可以在此頁面進行搜尋、查看餐廳細節等操作，點選右上方的Restaurant List即可返回主頁面
+此專案收納了我前八名的餐廳，使用者可以在此頁面進行搜尋、查看餐廳細節等操作。
 
-## Getting Started
+## 功能說明
 
-clone 或是 download此專案後，前往專案資料夾輸入以下指令
+| 功能操作| 說明 |
+| ------ | ----------- |
+| 查看細節| 點選餐廳圖示或文字即可 |
+| 搜尋    | 輸入餐廳名稱或主題關鍵字即可進行搜尋 |
+| 回首頁   | 點選右上角的Restaurant List即可回到首頁 |
+
+## 如何開始
+
+利用git bash或是cmd在目標資料夾輸入以下指令
+
+```
+git clone https://github.com/windate3411/AC_core_projects.git
+```
+
+### 安裝套件
+
+由於下載的會是整個AC_core_project資料夾
+請先利用指令或GUI畫面前往restaurant_list資料夾
+
+```
+cd restaurant_list
+```
+利用pwd確認自己在restaurant_list後，利用以下指令安裝相關npm套件
 
 ```
 npm install
 ```
 
-### Installing
+## 執行程式
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+在專案資料夾的路徑，輸入以下程式即可運行程式
 
 ```
-Give the example
+npm run dev
 ```
 
-And repeat
+## 給助教的話()
 
-```
-until finished
-```
+為了方便助教批改，以下列出修改部分
+--- 
++ 使用動態regrex改寫搜尋功能
++ 建立func.js用來儲存使用的函數(內部僅有search一個功能函式)
++ 微調搜尋框的css
+想達成卻未達成目標
+--- 
++ 原本打算用js語法做出類似auto-complete的效果，不過後來發現無法在sever端操作DOM而放棄
++ 原本打算在show頁面改變banner的背景圖片，但同樣因無法操作DOM而放棄
 
-End with an example of getting some data out of the system or using it for a little demo
+## 作者
 
-## Running the tests
+* **Danny Wang** 
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
