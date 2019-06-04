@@ -26,7 +26,7 @@ git clone https://github.com/windate3411/AC_core_projects.git
 
 ### 安裝套件
 
-由於下載的會是整個AC_core_project資料夾
+由於下載的會是整個AC_core_projects資料夾
 請先利用指令或GUI畫面前往restaurant_list資料夾
 
 ```
@@ -45,6 +45,8 @@ npm install
 ```
 npm run dev
 ```
+順利運作會在cmd視窗看到'you are now listening at port 3000'的訊息
+這時候便可以至127.0.0.1:3000查看網站內容囉!
 
 ## 給助教的話
 
