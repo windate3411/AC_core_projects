@@ -1,0 +1,61 @@
+<div class="container">
+  <h1 class="text-center m-5">你想對誰說幹話?</h1>
+  <div class="row">
+    <form action="/" method="POST">
+      <div class="form-group form-row">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+              class="card-img-top h-30" alt="designer">
+            <div class="card-body text-center">
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="designer" name="jobTitle" value="designer">
+                <label class="custom-control-label" for="designer">設計師</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+              class="card-img-top" alt="entrepreneur">
+            <div class="card-body text-center">
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="entrepreneur" name="jobTitle" value="entrepreneur">
+                <label class="custom-control-label" for="entrepreneur">創業家</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+              class="card-img-top" alt="engineer">
+            <div class="card-body text-center">
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="engineer" name="jobTitle" value="engineer">
+                <label class="custom-control-label" for="engineer">工程師</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group form-row mt-5 p-2">
+        <div class="col-md-3 text-center">
+          <button class="btn btn-success" type="submit">產生幹話</button>
+        </div>
+        <div class="col-md-9 text-center">
+          <div class="alert alert-info" role="alert">
+            {{#if jobTitle}}
+            <span>{{trash}}</span>
+            {{else}}
+            <span>先選個想說幹話的對象吧!</span>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
