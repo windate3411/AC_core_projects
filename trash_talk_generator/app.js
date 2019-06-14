@@ -21,10 +21,9 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-  const choice = req.body
-  const trash = trashTalk.talkTrashy(choice)
   const jobTitle = req.body.jobTitle
-  res.render('index', { trash, choice, jobTitle })
+  const trash = trashTalk.talkTrashy(jobTitle)
+  res.render('index', { trash, jobTitle })
 })
 
 // set https sever

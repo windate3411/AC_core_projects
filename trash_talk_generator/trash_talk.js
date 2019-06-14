@@ -5,31 +5,17 @@ const task = {
 }
 const phrase = ['很簡單', '很容易', '很快', '很正常']
 
-function getTheSentence(taskArray, position) {
-  const index1 = Math.floor(Math.random() * taskArray.length)
-  const index2 = Math.floor(Math.random() * taskArray.length)
-  // 建立一個物件做職稱的轉換
-  const jobTitle = {
-    engineer: '工程師',
-    designer: '設計師',
-    entrepreneur: '創業家'
-  }
-  return `身為一個${jobTitle[position]}，${taskArray[index1]}應該${phrase[index2]}吧!`
+const job = {
+  engineer: '工程師',
+  designer: '設計師',
+  entrepreneur: '創業家'
 }
 
-function talkTrashy(choice) {
-
-  switch (choice.jobTitle) {
-    case 'designer':
-      return getTheSentence(task.designer, choice.jobTitle);
-      break;
-    case 'engineer':
-      return getTheSentence(task.engineer, choice.jobTitle)
-      break;
-    case 'entrepreneur':
-      return getTheSentence(task.entrepreneur, choice.jobTitle)
-      break;
-  }
+function talkTrashy(jobTitle) {
+  if (jobTitle === undefined) return
+  const index1 = Math.floor(Math.random() * task[jobTitle].length)
+  const index2 = Math.floor(Math.random() * task[jobTitle].length)
+  return `身為一個${job[jobTitle]}，${task[jobTitle][index1]}應該${phrase[index2]}吧!`
 }
 
 module.exports = {
