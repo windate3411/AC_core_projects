@@ -2,6 +2,9 @@
 
 此專案收納了我前八名的餐廳，使用者可以在此頁面進行搜尋、查看餐廳細節等操作。
 
+## 操作預覽
+![image](https://github.com/windate3411/AC_core_projects/blob/master/restaurant_list_mongoDB/restaurant_gif.gif)
+
 ## 功能說明
 
 | 功能操作| 說明 |
