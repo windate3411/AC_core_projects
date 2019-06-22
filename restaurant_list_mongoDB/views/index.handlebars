@@ -22,7 +22,7 @@
           <div class="footer mt-2">
             <a href="/restaurants/{{{this.id}}}/edit" class="btn btn-default btn-sm">Edit</a>
             <a href="/restaurants/{{{this.id}}}" class="btn btn-info btn-sm">Detail</a>
-            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModalCenter"
+            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#a{{{this.id}}}"
               style="display:inline">
               Delete
             </button>
@@ -31,7 +31,7 @@
       </div>
     </div>
     {{!-- modal --}}
-    <div class="modal fade" style="font-family:'Noto Sans TC', sans-serif;" id="exampleModalCenter" tabindex="-1"
+    <div class="modal fade" style="font-family:'Noto Sans TC', sans-serif;" id="a{{{this.id}}}" tabindex="-1"
       role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
