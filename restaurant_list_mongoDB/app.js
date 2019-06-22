@@ -57,6 +57,19 @@ app.post('/restaurants', (req, res) => {
 
 })
 
+// search fuction
+
+// detail page
+app.get('/restaurants/:id', (req, res) => {
+  Restaurant.findById(req.params.id, (err, list) => {
+    if (err) return console.log(err);
+    return res.render('detail', { list })
+  })
+})
+
+// edit page
+
+
 // setting server
 app.listen(3000, () => {
   console.log(chalk.green('You are now listening at port 3000'));
