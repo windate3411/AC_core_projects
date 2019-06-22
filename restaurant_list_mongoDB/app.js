@@ -40,6 +40,22 @@ app.get('/', (req, res) => {
   })
 })
 
+// add new restaurant
+app.get('/restaurants/new', (req, res) => {
+  res.render('new')
+})
+
+app.post('/restaurants', (req, res) => {
+  const restaurant = new Restaurant()
+  for (let i in req.body) {
+    restaurant[i] = req.body[i]
+  }
+  restaurant.save(err => {
+    if (err) return console.log(err);
+    res.redirect('/')
+  })
+
+})
 
 // setting server
 app.listen(3000, () => {
