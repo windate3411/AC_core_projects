@@ -68,7 +68,26 @@ app.get('/restaurants/:id', (req, res) => {
 })
 
 // edit page
+app.get('/restaurants/:id/edit', (req, res) => {
+  console.log(req.body);
+  Restaurant.findById(req.params.id, (err, list) => {
+    if (err) return console.log(err);
+    return res.render('edit', { list })
+  })
+})
 
+app.post('/restaurants/:id', (req, res) => {
+  Restaurant.findById(req.params.id, (err, list) => {
+    if (err) return console.log(err);
+    for (let i in req.body) {
+      list[i] = req.body[i]
+    }
+    list.save(err => {
+      if (err) return console.log(err);
+      return res.redirect(`/restaurants/${req.params.id}`)
+    })
+  })
+})
 
 // setting server
 app.listen(3000, () => {
