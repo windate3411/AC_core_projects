@@ -28,10 +28,6 @@ router.get('/sort/:filter', (req, res) => {
       if (err) return console.log(err);
       return res.render('index', { list })
     })
-  // Restaurant.find((err, list) => {
-  //   if (err) return console.log(err);
-  //   return res.render('index', { list })
-  // })
 })
 
 
