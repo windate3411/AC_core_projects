@@ -6,7 +6,7 @@
 user1@example.com、user2@example.com
 密碼皆為12345678
 
-##登入與註冊頁面預覽
+## 登入與註冊頁面預覽
 
 ![restaurant](https://media.giphy.com/media/eH3zabT6x9Velouvxz/giphy.gif)
 
