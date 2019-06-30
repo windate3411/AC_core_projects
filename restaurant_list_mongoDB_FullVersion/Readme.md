@@ -32,7 +32,7 @@ git clone https://github.com/windate3411/AC_core_projects.git
 請先利用指令或GUI畫面前往restaurant_list_mongoDB_FullVersion資料夾
 
 ```
-cd restaurant_list_mongoDB_sort
+cd restaurant_list_mongoDB_mongoDB_FullVersion
 ```
 利用pwd確認自己在restaurant_list_mongoDB_FullVersion後，利用以下指令安裝相關npm套件
 
