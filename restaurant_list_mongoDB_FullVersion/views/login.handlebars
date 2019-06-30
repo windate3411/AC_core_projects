@@ -1,0 +1,41 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h1 class="text-center">Login</h1>
+      {{> messages}}
+      {{!-- 利用boostrap-validator做前端驗證，未滿足條件則阻止表單送出 --}}
+      <form class="text-center" style="color: #757575;" action="/users/login" method="POST" data-toggle="validator">
+
+        <!-- Email -->
+        <div class="md-form form-group">
+          <input type="email" id="email" class="form-control" name="email" required data-error="請輸入正確的Email格式">
+          <label for="email">E-mail</label>
+          <div class="help-block with-errors"></div>
+        </div>
+
+        <!-- Password -->
+        <div class="md-form form-group">
+          <input type="password" id="password" class="form-control" name="password" required data-error="請輸入密碼">
+          <label for="password">Password</label>
+          <div class="help-block with-errors"></div>
+        </div>
+
+
+        <!-- Sign in button -->
+        <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign
+          in</button>
+
+        <!-- Register -->
+        <p>Not a member?
+          <a href="/users/register">Register</a>
+        </p>
+
+        <!-- Social login -->
+        <p>or sign in with:</p>
+        <a href="/auth/facebook" class="fab fa-facebook-f"></a>
+        <a href="/auth/google" class="fab fa-google"></a>
+        <a href="/auth/github" class="fab fa-github"></a>
+      </form>
+    </div>
+  </div>
+</div>

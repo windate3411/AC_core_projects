@@ -1,0 +1,107 @@
+<form action="/restaurants" method="POST" class="needs-validation text-center border border-light  p-5 mt-5" novalidate>
+  <h1>餐廳資訊</h1>
+  <h6 class="text-left ml-2 mt-2"><span class="text-danger">*</span>為必填資訊</h6>
+  <div class="form-row justify-content-center">
+    {{!-- 餐廳名稱 --}}
+    <div class="col-md-4 mb-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend">餐廳名稱<span class="text-danger">*</span></span>
+        </div>
+        <input type="text" class="form-control" id="validationCustomUsername" placeholder="餐廳名稱"
+          aria-describedby="inputGroupPrepend" name="name" required>
+        <div class="invalid-feedback">
+          請填入餐廳名稱
+        </div>
+      </div>
+    </div>
+    {{!-- 餐廳評分 --}}
+    <div class="col-md-4 mb-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend">餐廳評分<span class="text-danger">*</span></span>
+        </div>
+        <input type="text" class="form-control" id="validationCustomUsername" placeholder="餐廳評分"
+          aria-describedby="inputGroupPrepend" name="rating" required>
+        <div class="invalid-feedback">
+          請填入餐廳評分
+        </div>
+      </div>
+    </div>
+    {{!-- 餐廳類別 --}}
+    <div class="col-md-4 mb-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend">餐廳類別<span class="text-danger">*</span></span>
+        </div>
+        <input type="text" class="form-control" id="validationCustomUsername" placeholder="餐廳類別"
+          aria-describedby="inputGroupPrepend" name="category" required>
+        <div class="invalid-feedback">
+          請填入餐廳類別
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row justify-content-center">
+    {{!-- 餐廳圖片 --}}
+    <div class="col-md-4 mb-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend">餐廳圖片<span class="text-danger">*</span></span>
+        </div>
+        <input type="text" class="form-control" id="validationCustomUsername" placeholder="餐廳圖片"
+          aria-describedby="inputGroupPrepend" name="image" required>
+        <div class="invalid-feedback">
+          請填入餐廳圖片連結
+        </div>
+      </div>
+    </div>
+    {{!-- 餐廳位置 --}}
+    <div class="col-md-4 mb-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend">餐廳地址<span class="text-danger">*</span></span>
+        </div>
+        <input type="text" class="form-control" id="validationCustomUsername" placeholder="餐廳地址"
+          aria-describedby="inputGroupPrepend" name="location" required>
+        <div class="invalid-feedback">
+          請填入餐廳位置
+        </div>
+      </div>
+    </div>
+    {{!-- 餐廳電話 --}}
+    <div class="col-md-4 mb-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend">餐廳電話<span class="text-danger">*</span></span>
+        </div>
+        <input type="text" class="form-control" id="validationCustomUsername" placeholder="餐廳電話"
+          aria-describedby="inputGroupPrepend" name="phone" required>
+        <div class="invalid-feedback">
+          請填入餐廳電話
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  {{!-- 餐廳描述 --}}
+  <div class="form-row justify-content-center">
+    <div class="col-md-12 mb-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend">餐廳描述</span>
+        </div>
+        <textarea type="text" class="form-control" id="validationCustomUsername" placeholder="餐廳描述"
+          aria-describedby="inputGroupPrepend" name="description" style="height: 200px;"></textarea>
+        <div class="invalid-feedback">
+          此欄位為必填欄位
+        </div>
+      </div>
+    </div>
+  </div>
+  {{!-- 提交按鈕 --}}
+  <button class="btn btn-primary btn-sm" type="submit">新增餐廳</button>
+  <a href="/" class="btn btn-danger btn-sm">取消新增</a>
+</form>

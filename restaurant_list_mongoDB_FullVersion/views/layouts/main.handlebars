@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Restaurant list</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/css/mdb.min.css" rel="stylesheet">
+  {{!-- google font --}}
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  {{!-- navbar --}}
+  <nav class="navbar navbar-dark default-color justify-content-between">
+    <a class="navbar-brand" href="/">Restaurant List</a>
+    {{!-- show the buttons if the user logins --}}
+    {{#if isAuthenticated}}
+    <div style="display: inline">
+      <a href="/restaurants/new" class="btn btn-info btn-sm">新增餐廳</a>
+      <a href="/users/logout" class="btn btn-danger btn-sm">登出</a>
+    </div>
+    {{/if}}
+  </nav>
+  {{!-- show the buttons if the user logins --}}
+  {{#if isAuthenticated}}
+  <div class="banner"></div>
+  <div class="container d-flex justify-content-between col-md-9 mt-3">
+    <form class="form-inline my-1" action="/restaurants/search" method="GET">
+      <div class="md-form form-sm my-0">
+        <input class="form-control form-control-sm mr-sm-2 mb-0" type="text" placeholder="輸入餐廳名稱或類別" aria-label="Search"
+          value="{{keyword}}" name='keyword'>
+      </div>
+      <button class="btn btn-primary btn-sm my-0" type="submit">搜尋餐廳</button>
+    </form>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="dropdownMenuButton"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        排序
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="/restaurants/sort?filters=a-z">A->Z</a>
+        <a class="dropdown-item" href="/restaurants/sort?filters=z-a">Z->A</a>
+        <a class="dropdown-item" href="/restaurants/sort?filters=location">地區</a>
+        <a class="dropdown-item" href="/restaurants/sort?filters=ratings_desc">評分高到低</a>
+        <a class="dropdown-item" href="/restaurants/sort?filters=rating_asc">評分低到高</a>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+  {{{body}}}
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js"></script>
+  {{!-- bootstrapValidator --}}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+  <script src="/javascripts/validation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<div class="card text-center h-100 mt-5">
+  <div class="card-header">餐廳資訊</div>
+  <h6 class="text-left ml-4 mt-2"><span class="text-danger">*</span>為必填資訊</h6>
+  <div class="card-body">
+    <form action="/restaurants/{{{list.id}}}" method="POST" class="needs-validation text-center" novalidate>
+      <div class="form-row justify-content-center">
+        {{!-- 餐廳名稱 --}}
+        <div class="col-md-4 mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupPrepend">餐廳名稱<span class="text-danger">*</span></span>
+            </div>
+            <input type="text" class="form-control" id="validationCustomUsername" placeholder="餐廳名稱"
+              aria-describedby="inputGroupPrepend" name="name" value="{{list.name}}" required>
+            <div class="invalid-feedback">
+              請填入餐廳名稱
+            </div>
+          </div>
+        </div>
+        {{!-- 餐廳評分 --}}
+        <div class="col-md-4 mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupPrepend">餐廳評分<span class="text-danger">*</span></span>
+            </div>
+            <input type="text" class="form-control" id="validationCustomUsername" placeholder="餐廳評分"
+              aria-describedby="inputGroupPrepend" name="rating" value="{{list.rating}}" required>
+            <div class="invalid-feedback">
+              請填入餐廳評分
+            </div>
+          </div>
+        </div>
+        {{!-- 餐廳類別 --}}
+        <div class="col-md-4 mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupPrepend">餐廳類別<span class="text-danger">*</span></span>
+            </div>
+            <input type="text" class="form-control" id="validationCustomUsername" placeholder="餐廳類別"
+              aria-describedby="inputGroupPrepend" name="category" value="{{list.category}}" required>
+            <div class="invalid-feedback">
+              請填入餐廳類別
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row justify-content-center">
+        {{!-- 餐廳圖片 --}}
+        <div class="col-md-4 mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupPrepend">餐廳圖片<span class="text-danger">*</span></span>
+            </div>
+            <input type="text" class="form-control" id="validationCustomUsername" placeholder="餐廳圖片"
+              aria-describedby="inputGroupPrepend" name="image" value="{{list.image}}" required>
+            <div class="invalid-feedback">
+              請填入餐廳圖片連結
+            </div>
+          </div>
+        </div>
+        {{!-- 餐廳位置 --}}
+        <div class="col-md-4 mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupPrepend">餐廳地址<span class="text-danger">*</span></span>
+            </div>
+            <input type="text" class="form-control" id="validationCustomUsername" placeholder="餐廳地址"
+              aria-describedby="inputGroupPrepend" name="location" value="{{list.location}}" required>
+            <div class="invalid-feedback">
+              請填入餐廳位置
+            </div>
+          </div>
+        </div>
+        {{!-- 餐廳電話 --}}
+        <div class="col-md-4 mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupPrepend">餐廳電話<span class="text-danger">*</span></span>
+            </div>
+            <input type="text" class="form-control" id="validationCustomUsername" placeholder="餐廳電話"
+              aria-describedby="inputGroupPrepend" name="phone" value="{{list.phone}}" required>
+            <div class="invalid-feedback">
+              請填入餐廳電話
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      {{!-- 餐廳描述 --}}
+      <div class="form-row justify-content-center">
+        <div class="col-md-12 mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupPrepend">餐廳描述</span>
+            </div>
+            <textarea type="text" class="form-control" id="validationCustomUsername" placeholder="餐廳描述"
+              aria-describedby="inputGroupPrepend" name="description" value="{{list.description}}"
+              style="height: 200px;">{{list.description}}</textarea>
+            <div class="invalid-feedback">
+              此欄位為必填欄位
+            </div>
+          </div>
+        </div>
+      </div>
+      {{!-- 提交按鈕 --}}
+      <button class="btn btn-primary btn-sm" type="submit">確認編輯</button>
+      <a href="/" class="btn btn-danger btn-sm">取消編輯</a>
+    </form>
+  </div>
+</div>

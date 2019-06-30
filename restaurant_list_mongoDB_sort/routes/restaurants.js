@@ -38,9 +38,10 @@ router.get('/new', (req, res) => {
 
 router.post('/', (req, res) => {
   const restaurant = new Restaurant()
-  for (let i in req.body) {
-    restaurant[i] = req.body[i]
-  }
+  Object.assign(restaurant, req.body)
+  // for (let i in req.body) {
+  //   restaurant[i] = req.body[i]
+  // }
   restaurant.save(err => {
     if (err) return console.log(err);
     res.redirect('/')

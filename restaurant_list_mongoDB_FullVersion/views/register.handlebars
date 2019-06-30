@@ -1,0 +1,58 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h1 class="text-center">Register</h1>
+      {{> messages}}
+      {{!-- 利用boostrap-validator做前端驗證，未滿足條件則阻止表單送出 --}}
+      <form class="text-center" style="color: #757575;" action="/users/register" method="POST" data-toggle="validator">
+
+        <!-- Name -->
+        <div class="md-form">
+          <input type="text" id="name" class="form-control" name="name" value="{{name}}">
+          <label for="name">Name<span class="text-danger">*</span></label>
+        </div>
+
+        <!-- Email -->
+        <div class="md-form form-group">
+          <input type="email" id="email" class="form-control" name="email" value="{{email}}" data-error="請輸入正確的Email格式"
+            required>
+          <label for="email">E-mail<span class="text-danger">*</span></label>
+          <div class="help-block with-errors"></div>
+        </div>
+
+        <!-- Password -->
+        <div class="md-form form-group">
+          <input type="password" id="password" class="form-control" name="password" value="{{password}}"
+            data-minlength="8" data-error="密碼至少8個字元">
+          <label for="password">Password<span class="text-danger">*</span></label>
+          <div class="help-block with-errors"></div>
+        </div>
+
+        <!-- Password comfirm -->
+        <div class="md-form form-group">
+          <input type="password" id="password2" class="form-control" name="password2" data-match="#password"
+            value="{{password2}}" data-match-error="兩次輸入的密碼不一致!">
+          <label for="password2">Comfirm Password<span class="text-danger">*</span></label>
+          <div class="help-block with-errors"></div>
+        </div>
+
+
+        <!-- Register button -->
+        <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Register
+          in</button>
+
+        <!-- Register -->
+        <p>Already a member?
+          <a href="/users/login">Login</a>
+        </p>
+
+        <!-- Social login -->
+        <p>or sign in with:</p>
+        <a href="/auth/facebook" class="fab fa-facebook-f"></a>
+        <a href="/auth/google" class="fab fa-google"></a>
+        <a href="/auth/github" class="fab fa-github"></a>
+
+      </form>
+    </div>
+  </div>
+</div>
