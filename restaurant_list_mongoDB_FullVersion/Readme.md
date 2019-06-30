@@ -8,7 +8,7 @@ user1@example.com、user2@example.com
 
 ##登入與註冊頁面預覽
 
-![restaurant](https://gph.is/g/EGyk0qd)
+![restaurant](https://media.giphy.com/media/eH3zabT6x9Velouvxz/giphy.gif)
 
 ## 開發環境
 
